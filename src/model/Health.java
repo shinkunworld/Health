@@ -23,20 +23,22 @@ public class Health implements Serializable {
 		this.weight = weight;
 	}
 
+	public double getBmi() {
+		return bmi;
+	}
+
 	public void setBmi(double bmi) {
 		this.bmi = bmi;
 	}
 
-	public double getBmi() {
-		return this.bmi;
+
+	public String getBodyType() {
+		return bodyType;
 	}
 
 	public void setBodyType(String bodyType) {
 		this.bodyType = bodyType;
 	}
 
-	public String getBodyType() {
-		return this.bodyType;
-	}
 
 }
