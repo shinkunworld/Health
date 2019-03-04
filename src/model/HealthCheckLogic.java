@@ -1,21 +1,22 @@
 package model;
 
 public class HealthCheckLogic {
-public void execute(Health health) {
-	//BMI°è»ê
-	double weight=health.getWeight();
-	double height=health.getHeight();
-	double bmi=weight/(height/100.0*height/100.0);
-	health.setBmi(bmi);
-	
-//	BMIÁö¼ö¿¡¼­ Ã¼ÇüÀÇ ÆÇ´ÜÇØ¼­ ¼³Á¤
-	String bodyType;
-	if(bmi<18.5) {
-		bodyType="under weight";
-	}else if (bmi<25) {
-		bodyType="standard weight";
-	}else {
-		bodyType="obesity";
+	public void execute(Health health) {
+		//BMIê³„ì‚°
+		double weight = health.getWeight();
+		double height = health.getHeight();
+		double bmi = weight / (height / 100.0 * height / 100.0);
+		health.setBmi(bmi);
+
+		//	BMIì§€ìˆ˜ì—ì„œ ì²´í˜•ì˜ íŒë‹¨í•´ì„œ ì„¤ì •
+		String bodyType;
+		if (bmi < 18.5) {
+			bodyType = "under weight";
+		} else if (bmi < 25) {
+			bodyType = "standard weight";
+		} else {
+			bodyType = "obesity";
+		}
+		health.setBodyType(bodyType);
 	}
-health.setBodytype(bodyType);}
 }
